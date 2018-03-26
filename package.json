@@ -1,25 +1,16 @@
 {
-  "name": "drrr",
-  "version": "1.0.0",
-  "description": "``` $ node server.js ```",
-  "main": "main.js",
+  "name": "drrr2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sollrei/drrr.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sollrei/drrr/issues"
-  },
-  "homepage": "https://github.com/sollrei/drrr#readme",
-  "devDependencies": {
-    "connect": "^3.6.6",
-    "serve-static": "^1.13.2",
-    "ws": "^5.1.0"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

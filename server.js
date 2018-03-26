@@ -14,7 +14,10 @@ wss.on('connection', function(ws) {
     var closeEvent = false;
     ws.on('message', function(message) {
         wss.clients.forEach(function (item, index, array) {
-            item.send(message);
+            var msg = JSON.parse(message);
+            msg.count = wss.clients.length;
+
+            item.send(JSON.stringify(msg));
         });
 
         if (!closeEvent) {
@@ -33,7 +36,7 @@ wss.on('connection', function(ws) {
 
 
 
-app.use(serveStatic(__dirname, {'index': ['index.html']}));
+app.use(serveStatic(__dirname + '/build', {'index': ['index.html']}));
 console.log(' [*] Listening on 127.0.0.1:3001' );
 app.listen(3001);
 
