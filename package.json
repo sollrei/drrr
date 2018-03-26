@@ -12,5 +12,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "connect": "^3.6.6",
+    "express": "^4.16.3",
+    "ws": "^5.1.0"
   }
 }
